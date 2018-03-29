@@ -42,13 +42,12 @@ hooks:
         if [ ! -f /app/private/.platform.installed ]; then
             # Install OpenY from the profile on the first deploy.
             cd /app/web
-            /app/bin/drush si -y openy --account-pass=admin
-            /app/bin/drush cr
+            /app/bin/drush site-install -y openy --account-pass=admin
+            /app/bin/drush cache-rebuild
             touch /app/private/.platform.installed
         else
             /app/bin/drush -y cache-rebuild
             /app/bin/drush -y updatedb
-            /app/bin/drush -y config-import
             /app/bin/drush -y entup
           fi
 
