@@ -4,8 +4,8 @@
  * Platform.sh example settings.php file for Drupal 8.
  */
 
-// Install with the 'thunder' profile for this example.
-$settings['install_profile'] = 'thunder';
+// Install with the 'openy' profile for this example.
+$settings['install_profile'] = 'openy';
 
 /**
  * Default Drupal 8 settings.
