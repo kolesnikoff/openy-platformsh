@@ -48,8 +48,8 @@ hooks:
         else
             /app/bin/drush -y cache-rebuild
             /app/bin/drush -y updatedb
-            /app/bin/drush -y entup
-          fi
+            /app/bin/drush -y entity-updates
+        fi
 
 # The configuration of app when it is exposed to the web.
 web:
